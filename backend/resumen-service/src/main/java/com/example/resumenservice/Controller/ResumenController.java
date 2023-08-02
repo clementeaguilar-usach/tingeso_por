@@ -27,23 +27,9 @@ public class ResumenController {
     }
 
     @GetMapping("/allResumen")
-    public ResponseEntity <ArrayList<ResumenEntity>> getAllResumen() {
+    public ResponseEntity<ArrayList<ResumenEntity>> getAllResumen() {
         ArrayList<ResumenEntity> resumens;
         resumens = resumenService.getAllResumen();
         return ResponseEntity.ok(resumens);
-    }
-
-    @GetMapping("/test1")
-    public ResponseEntity <ArrayList<Entrada>> test1() {
-        ArrayList<Entrada> entradas;
-        entradas = resumenService.allEntradas();
-        return ResponseEntity.ok(entradas);
-    }
-
-    @GetMapping("/test2")
-    public ResponseEntity <ArrayList<Salida>> test2() {
-        ArrayList<Salida> salidas;
-        salidas = resumenService.allSalidas();
-        return ResponseEntity.ok(salidas);
     }
 }
