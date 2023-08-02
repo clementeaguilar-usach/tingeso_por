@@ -1,6 +1,6 @@
 package com.example.entradaservice.Model;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.*;
 
 import java.util.Date;
