@@ -14,5 +14,6 @@ public class Salida {
     private String tipoDocumento;
     private String numDocumento;
     private String motivo;
+    private Integer monto;
     private String entidad;
 }

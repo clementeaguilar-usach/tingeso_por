@@ -13,12 +13,13 @@ public class SalidaService {
     @Autowired
     SalidaRepository salidaRepository;
 
-    public void saveSalida(Date fecha, String tipoDocumento, String numDocumento, String motivo) {
+    public void saveSalida(Date fecha, String tipoDocumento, String numDocumento, String motivo, Integer monto) {
         SalidaEntity nuevaSalida = new SalidaEntity();
         nuevaSalida.setFecha(fecha);
         nuevaSalida.setTipoDocumento(tipoDocumento);
         nuevaSalida.setNumDocumento(numDocumento);
         nuevaSalida.setMotivo(motivo);
+        nuevaSalida.setMonto(monto);
         nuevaSalida.setEntidad("salida");
         salidaRepository.save(nuevaSalida);
     }

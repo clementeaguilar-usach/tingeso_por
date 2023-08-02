@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 @RestController
-@RequestMapping("/salidas")
+@RequestMapping("/salida")
 public class SalidaController {
 
     @Autowired
@@ -20,8 +20,9 @@ public class SalidaController {
     public ResponseEntity saveSalida(@RequestParam("fecha") Date fecha,
                                      @RequestParam("tipoDocumento") String tipoDocumento,
                                      @RequestParam("numDocumento") String numDocumento,
-                                     @RequestParam("motivo") String motivo) {
-        salidaService.saveSalida(fecha, tipoDocumento, numDocumento, motivo);
+                                     @RequestParam("motivo") String motivo,
+                                     @RequestParam("monto") Integer monto) {
+        salidaService.saveSalida(fecha, tipoDocumento, numDocumento, motivo, monto);
         return ResponseEntity.ok().build();
     }
 

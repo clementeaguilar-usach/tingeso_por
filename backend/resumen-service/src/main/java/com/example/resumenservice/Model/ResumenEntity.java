@@ -14,10 +14,10 @@ public class ResumenEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private Integer saldo;
-    private String numDoc;
-    private Integer monto;
-    private String motivo;
-    private String tipoDoc;
     private Date fecha;
+    private String tipoDocumento;
+    private String numDocumento;
+    private String motivo;
+    private Integer monto;
+    private Integer saldo;
 }
