@@ -3,6 +3,7 @@ package com.example.entradaservice.Controller;
 import com.example.entradaservice.Model.EntradaEntity;
 import com.example.entradaservice.Service.EntradaService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,7 +18,7 @@ public class EntradaController {
     EntradaService entradaService;
 
     @PostMapping("/saveEntrada")
-    public ResponseEntity saveEntrada(@RequestParam("fecha") Date fecha,
+    public ResponseEntity saveEntrada(@RequestParam("fecha") @DateTimeFormat(pattern = "dd/MM/yyyy") Date fecha,
                                       @RequestParam("tipoDocumento") String tipoDocumento,
                                       @RequestParam("numDocumento") String numDocumento,
                                       @RequestParam("motivo") String motivo,

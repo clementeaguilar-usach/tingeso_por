@@ -20,4 +20,5 @@ public class ResumenEntity {
     private String motivo;
     private Integer monto;
     private Integer saldo;
+    private String tipoMov;
 }

@@ -3,6 +3,7 @@ package com.example.salidaservice.Controller;
 import com.example.salidaservice.Model.SalidaEntity;
 import com.example.salidaservice.Service.SalidaService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,7 +18,7 @@ public class SalidaController {
     SalidaService salidaService;
 
     @PostMapping("/saveSalida")
-    public ResponseEntity saveSalida(@RequestParam("fecha") Date fecha,
+    public ResponseEntity saveSalida(@RequestParam("fecha") @DateTimeFormat(pattern = "dd/MM/yyyy") Date fecha,
                                      @RequestParam("tipoDocumento") String tipoDocumento,
                                      @RequestParam("numDocumento") String numDocumento,
                                      @RequestParam("motivo") String motivo,

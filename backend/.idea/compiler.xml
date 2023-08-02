@@ -10,13 +10,8 @@
         <module name="entrada-service" />
         <module name="config-service" />
         <module name="resumen-service" />
-        <module name="gateway-service" />
-      </profile>
-      <profile name="Annotation profile for salida-service" enabled="true">
-        <sourceOutputDir name="../entrada-service/target/salida-service/target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../entrada-service/target/salida-service/target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
         <module name="salida-service" />
+        <module name="gateway-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

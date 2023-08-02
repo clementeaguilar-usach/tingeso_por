@@ -82,6 +82,7 @@ public class ResumenService {
                 nuevoResumen.setMotivo(entradaActual.getMotivo());
                 nuevoResumen.setMonto(entradaActual.getMonto());
                 nuevoResumen.setSaldo(saldo);
+                nuevoResumen.setTipoMov(entradaActual.getEntidad());
                 resumenRepository.save(nuevoResumen);
                 iEntrada++;
             }
@@ -94,6 +95,7 @@ public class ResumenService {
                 nuevoResumen.setMotivo(salidaActual.getMotivo());
                 nuevoResumen.setMonto(salidaActual.getMonto());
                 nuevoResumen.setSaldo(saldo);
+                nuevoResumen.setTipoMov(salidaActual.getEntidad());
                 resumenRepository.save(nuevoResumen);
                 iSalida++;
             }
